@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 30
+    },
+    "auditLog": "D:\\Angular\\Backend\\logs\\.bb189e62c663f015db5b5d25b505723e55bf851e-audit.json",
+    "files": [
+        {
+            "date": 1738045263054,
+            "name": "D:\\Angular\\Backend\\logs\\Error-2025-01-28.txt",
+            "hash": "aaf0940219335b15f2853cf9fe4508257fcc577cbcb5fcfee47aec02f2b9e993"
+        },
+        {
+            "date": 1738222044714,
+            "name": "D:\\Angular\\Backend\\logs\\Error-2025-01-30.txt",
+            "hash": "c83045ce0868d505f4bd979021cc0dcf3de862c8bda27a30f0cf444eaa633571"
+        },
+        {
+            "date": 1738932503876,
+            "name": "D:\\Angular\\Backend\\logs\\Error-2025-02-07.txt",
+            "hash": "493c40f394e47c5cb2be053289e26463cce5a84e17ff906ae3f3c39d4c02c690"
+        }
+    ],
+    "hashType": "sha256"
+}
