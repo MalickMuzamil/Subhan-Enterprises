@@ -1,0 +1,74 @@
+@media (min-width: 992px) {
+  [data-nav-layout="horizontal"] .main-header-container .sidemenu-toggle {
+    display: none;
+  }
+}
+
+.google-btn {
+  background-color: #00ffff;
+  font-weight: bold;
+}
+
+.btn-register {
+  background-color: #00ffff;
+}
+
+.btn-register:hover {
+  border: 1px solid white;
+}
+
+.google-btn:hover {
+  border: 1px solid white;
+}
+
+.custom-button {
+  background: #000000 !important;
+  padding: 10px;
+}
+
+.custom-button:hover {
+  background: rgb(0, 255, 255) !important;
+}
+
+.secondory-btn{
+  background:  #003b4cbd;
+  color: white;
+}
+
+.secondory-btn:hover{
+  background-color: #000000;
+  border: 1px solid white;
+  color: white;
+}
+
+.authentication {
+  background: linear-gradient(to right, #001f2e, #000000) !important;
+  align-items: center;
+}
+
+.custom-links {
+  color: #00ffff !important;
+}
+
+.custom-links:hover {
+  text-decoration: underline;
+}
+
+.custom-backgorund {
+  background: linear-gradient(to right, #001f2e, #000000) !important;
+}
+
+@media (min-width: 992px) {
+  [data-nav-layout="horizontal"] .app-sidebar {
+    width: 100% !important;
+    height: 4rem;
+    border-block-end: 1px solid var(--menu-border-color);
+    border-inline-end: 0 !important;
+    inset-block-start: 0.35rem;
+    z-index: 99999 !important;
+  }
+}
+
+.form-background{
+  background: #001f2e !important;
+}

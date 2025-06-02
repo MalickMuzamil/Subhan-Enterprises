@@ -1,0 +1,25 @@
+.card.custom-card {
+  background: #001f2e !important;
+}
+
+@media (max-width: 767px) {
+  .card-footer {
+    position: relative;
+    bottom: 0;
+  }
+
+  .card-body {
+    padding-bottom: 80px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-footer {
+    position: relative;
+  }
+}
+
+.terms-container{
+  background: linear-gradient(to right, #001f2e, #000000) !important;
+
+}

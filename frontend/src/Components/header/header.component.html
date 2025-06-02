@@ -1,0 +1,263 @@
+<header class="app-header custom-backgorund">
+    <div class="main-header-container container-fluid">
+        <div class="header-content-left">
+            <div class="header-element">
+                <div class="horizontal-logo">
+                    <a href="index.html" class="header-logo">
+                        <img src="../assets/images/brand-logos/ATV-logo.png" alt="logo" class="toggle-logo" />
+                        <img src="../assets/images/brand-logos/ATV-logo.png" alt="logo" class="toggle-dark" />
+                    </a>
+                </div>
+            </div>
+            <div class="header-element">
+                <a href="javascript:void(0);" class="sidemenu-toggle header-link" data-bs-toggle="sidebar">
+                    <span class="open-toggle">
+                        <i class="fa-solid fa-bars fs-20"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="header-content-right">
+            <div class="header-element align-items-center">
+                <ng-container *ngIf="isLoggedIn; else loginSignup">
+                    <a href="javascript:void(0);" class="header-link dropdown-toggle d-flex" id="mainHeaderProfile"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="d-flex align-items-center">
+                            <div class="me-sm-2 me-0">
+                                <img src="../assets/images/faces/9.jpg" alt="img" width="32" height="32"
+                                    class="rounded-circle" />
+                            </div>
+                            <div class="d-sm-block d-none">
+                                <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
+                                <span class="op-7 fw-normal d-block fs-11">Web Designer</span>
+                            </div>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="mainHeaderProfile">
+                        <li><a class="dropdown-item" href="/profile">Profile</a></li>
+                        <li><a class="dropdown-item" href="/settings">Settings</a></li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="javascript:void(0);" (click)="logout()">
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </ng-container>
+
+                <ng-template #loginSignup>
+                    <div class="btn-list d-lg-flex d-none">
+                        <a routerLink="/" class="btn btn-wave btn-register"> Sign Up </a>
+                        <a routerLink="/" class="btn btn-wave secondory-btn"> Login </a>
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<aside class="app-sidebar sticky custom-backgorund" id="sidebar">
+    <div class="container-xl">
+        <div class="main-sidebar">
+            <nav
+                class="main-menu-container nav nav-pills sub-open d-lg-flex justify-content-lg-between align-items-center">
+                <div class="landing-logo-container pe-4">
+                    <div class="horizontal-logo">
+                        <a routerLink="/home" class="header-logo">
+                            <img src="../assets/images/brand-logos/ATV-logo.png" alt="logo" class="desktop-logo" />
+                            <img src="../assets/images/brand-logos/ATV-logo.png" alt="logo" class="desktop-white" />
+                        </a>
+                    </div>
+                </div>
+
+                <div class="slide-left d-none" id="slide-left">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>
+                    </svg>
+                </div>
+                <ul class="main-menu" style="margin-left: 0px; margin-right: 0px">
+                    <li class="slide">
+                        <a class="side-menu__item" role="button" routerLink="/home">
+                            <span class="side-menu__label">Home</span>
+                        </a>
+                    </li>
+                    <li class="slide">
+                        <a routerLink="/about-us" class="side-menu__item">
+                            <span class="side-menu__label">About</span>
+                        </a>
+                    </li>
+                    <!-- <li class="">
+                        <a href="javascript:void(0);" class="side-menu__item">
+                            <span class="">Pages</span>
+                            <i class="fas fa-chevron-right side-menu__angle op-8"></i>
+                        </a>
+                        <ul class="slide-menu child1 active dropdown" data-popper-placement="bottom">
+                            <li class="slide">
+                                <a href="#statistics" class="side-menu__item">Quad Bikes</a>
+                            </li>
+                            <li class="slide">
+                                <a href="#our-mission" class="side-menu__item">Mini Trail Bike</a>
+                            </li>
+                            <li class="slide">
+                                <a href="#features" class="side-menu__item">Mini Heavy Bikes</a>
+                            </li>
+                            <li class="slide">
+                                <a href="#testimonials" class="side-menu__item">Spare Parts</a>
+                            </li>
+                        </ul>
+                    </li> -->
+              
+              
+                    <li class="nav-item dropdown slide has-sub side-menu__item">
+                        <a class="nav-link dropdown-toggle side-menu__label me-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Pages
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" routerLink="/details">Mini Trail Bike</a></li>
+                          <li><a class="dropdown-item">Mini Heavy Bike</a></li>
+                          <li><a class="dropdown-item">Quad Bike</a></li>
+                        </ul>
+                      </li>
+                    <li class="slide">
+                        <a href="#pricing" class="side-menu__item">
+                            <span class="side-menu__label">Pricing</span>
+                        </a>
+                    </li>
+
+                    <li class="slide">
+                        <a routerLink="/faq" class="side-menu__item">
+                            <span class="side-menu__label">Faq's</span>
+                        </a>
+                    </li>
+
+                    <li class="slide">
+                        <a routerLink="/contact-us" class="side-menu__item">
+                            <span class="side-menu__label">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ng-container *ngIf="isLoggedIn; else showbuttons">
+
+                   <!-- <ul class="d-flex">
+                    <li>
+                        <a href="javascript:void(0);" class="header-link" data-bs-toggle="modal"
+                        data-bs-target="#searchModal">
+                        <i class="bx bx-search-alt-2 header-link-icon fs-20 me-3"></i>
+                    </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-auto-close="outside"
+                        data-bs-toggle="dropdown"> <i class="bx bx-cart header-link-icon"></i> <span
+                            class="badge bg-primary rounded-pill header-icon-badge" id="cart-icon-badge">5</span> </a>
+                    </li>
+                   </ul> -->
+
+                    <a href="javascript:void(0);" class="header-link dropdown-toggle d-flex" id="mainHeaderProfile"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="d-flex align-items-center">
+                            <div class="me-sm-2 me-0">
+                                <img src="../assets/images/brand-logos/ATV-logo.png" alt="img" width="32" height="32"
+                                    class="rounded-circle" />
+                            </div>
+                            <div class="d-sm-block d-none">
+                                <p class="fw-semibold mb-0 lh-1">Json Taylor</p>
+                                <span class="op-7 fw-normal d-block fs-11">Web Designer</span>
+                            </div>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="mainHeaderProfile">
+                        <li><a class="dropdown-item" href="/profile">Profile</a></li>
+                        <li><a class="dropdown-item" href="/settings">Settings</a></li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="javascript:void(0);" (click)="logout()">
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </ng-container>
+
+                <ng-template #showbuttons>
+                    <div class="d-lg-flex d-none">
+                        <div class="btn-list d-lg-flex d-none mt-lg-2 mt-xl-0 mt-0 align-items-center">
+                            <a routerLink="/" class="btn btn-wave btn-register"> Sign Up </a>
+                            <a routerLink="/" class="btn btn-wave secondory-btn"> Login </a>
+                        </div>
+                    </div>
+                </ng-template>
+
+            </nav>
+        </div>
+    </div>
+</aside>
+
+<div id="responsive-overlay" class=""></div>
+
+<div class="modal fade mt-lg-5 pt-lg-5" id="searchModal" tabindex="-1" aria-labelledby="searchModal"
+    style="display: none" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content custom-backgorund">
+            <div class="modal-b   ody">
+                <div class="input-group">
+                    <a href="javascript:void(0);" class="input-group-text search-btn" id="Search-Grid"><i
+                            class="bx bx-search-alt-2 header-link-icon fs-18"></i></a>
+                    <input type="search" class="form-control border-0 px-2" placeholder="Search"
+                        aria-label="Username" />
+
+                    <button type="button" class="btn btn-sm secondory-btn">
+                        Clear Recents
+                    </button>
+
+                </div>
+                <div class="mt-4 px-3">
+                    <p class="font-weight-semibold text-muted mb-2">
+                        Are You Looking For...
+                    </p>
+                    <span class="search-tags alert"><i class="fe fe-user me-2"></i>People<a href="javascript:void(0)"
+                            class="tag-addon" data-bs-dismiss="alert"><i class="fe fe-x"></i></a></span>
+                    <span class="search-tags alert"><i class="fe fe-file-text me-2"></i>Pages<a
+                            href="javascript:void(0)" class="tag-addon" data-bs-dismiss="alert"><i
+                                class="fe fe-x"></i></a></span>
+                    <span class="search-tags alert"><i class="fe fe-align-left me-2"></i>Articles<a
+                            href="javascript:void(0)" class="tag-addon" data-bs-dismiss="alert"><i
+                                class="fe fe-x"></i></a></span>
+                    <span class="search-tags alert"><i class="fe fe-server me-2"></i>Tags<a href="javascript:void(0)"
+                            class="tag-addon" data-bs-dismiss="alert"><i class="fe fe-x"></i></a></span>
+                </div>
+                <div class="my-4 px-3">
+                    <p class="font-weight-semibold text-muted mb-2">Recent Search :</p>
+                    <div class="p-2 border br-5 d-flex align-items-center text-muted mb-2 alert">
+                        <a href="notifications.html"><span>Notifications</span></a>
+                        <a class="ms-auto lh-1" href="javascript:void(0);" data-bs-dismiss="alert" aria-label="Close"><i
+                                class="fe fe-x text-muted"></i></a>
+                    </div>
+                    <div class="p-2 border br-5 d-flex align-items-center text-muted mb-2 alert">
+                        <a href="alerts.html"><span>Alerts</span></a>
+                        <a class="ms-auto lh-1" href="javascript:void(0);" data-bs-dismiss="alert" aria-label="Close"><i
+                                class="fe fe-x text-muted"></i></a>
+                    </div>
+                    <div class="p-2 border br-5 d-flex align-items-center text-muted mb-0 alert">
+                        <a href="mail.html"><span>Mail</span></a>
+                        <a class="ms-auto lh-1" href="javascript:void(0);" data-bs-dismiss="alert" aria-label="Close"><i
+                                class="fe fe-x text-muted"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="btn-group ms-auto">
+                    <button type="button" class="btn btn-sm btn-register">Search</button>
+                    <button type="button" class="btn btn-sm secondory-btn">
+                        Clear Recents
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

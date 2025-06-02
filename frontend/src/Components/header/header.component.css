@@ -1,0 +1,17 @@
+.form-control {
+  background: linear-gradient(to right, #001f2e, #000000);
+}
+
+.search-btn {
+  background: transparent;
+  border: 0px !important;
+}
+
+.dropdown-menu{
+  background: #001920 !important;
+  top: 1.1rem !important;
+}
+
+.dropdown-item:not(.active):active, .dropdown-item:not(.active):focus, .dropdown-item:not(.active):hover {
+color: white !important;
+}

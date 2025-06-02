@@ -1,0 +1,29 @@
+.about-container {
+  background: linear-gradient(to right, #001f2e, #000000) !important;
+}
+
+.about-heading:before {
+  background-image: linear-gradient(to right, #00ffff, rgba(0, 255, 255, 0.2));
+}
+
+@media (min-width: 1200px) {
+  .aboutus-banner-img img {
+    height: 36.5rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .aboutus-banner {
+    padding: 0rem !important;
+  }
+}
+
+.shadow {
+  box-shadow: rgba(255, 255, 255, 0.15) 0px 7px 8px,
+    rgba(255, 255, 255, 0.2) 0px 0px 3px, rgba(255, 255, 255, 0.3) 0px -1px 6px,
+    rgba(255, 255, 255, 0.2) 0px 8px 12px, rgba(255, 255, 255, 0.1) 0px -3px 5px !important;
+}
+
+.form-control {
+  background: linear-gradient(to right, #001f2e, #000000);
+}

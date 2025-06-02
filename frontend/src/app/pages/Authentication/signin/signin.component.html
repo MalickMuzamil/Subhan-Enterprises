@@ -1,0 +1,129 @@
+<div class="row authentication mx-0 py-3">
+    <div class="col-xxl-7 col-xl-7 col-lg-12">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class="col-xxl-6 col-xl-7 col-lg-7 col-md-7 col-sm-8 col-12">
+                <div class="p-5">
+                    <p class="h5 fw-semibold mb-2 mb-4">Sign In</p>
+                    <div>
+                        <button class="btn google-btn">
+                            <svg class="google-svg" xmlns="http://www.w3.org/2000/svg" width="2443" height="2500"
+                                preserveAspectRatio="xMidYMid" viewBox="0 0 256 262">
+                                <path fill="#4285F4"
+                                    d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027">
+                                </path>
+                                <path fill="#34A853"
+                                    d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1">
+                                </path>
+                                <path fill="#FBBC05"
+                                    d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782">
+                                </path>
+                                <path fill="#EB4335"
+                                    d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251">
+                                </path>
+                            </svg>Sign In with google
+                        </button>
+                    </div>
+
+                    <div class="text-center my-5 authentication-barrier">
+                        <span>OR</span>
+                    </div>
+
+                    <form [formGroup]="SignInform" (ngSubmit)="onSubmit()" class="row gy-3">
+                        <div class="col-xl-12 mt-0">
+                            <label for="email" class="form-label text-default">Email Address<sup
+                                    class="text-danger">*</sup></label>
+
+                            <input type="text" class="form-control form-control-lg" placeholder="Email"
+                                formControlName="email" autocomplete="email" 
+                                [ngClass]="{ 'is-invalid': submitted && error['email'].errors }" />
+
+                            <div class="invalid-feedback">
+                                @if (submitted && error['email'].errors) {
+                                @if (error['email'].errors['required']) {
+                                <small>Email Field is Empty.</small>
+                                } @if (error['email'].errors['pattern']) {
+                                <small>Email is not Valid.</small>
+                                }
+                                }
+                            </div>
+                        </div>
+
+                        <div class="col-xl-12 mb-3">
+                            <label for="password" class="form-label text-default d-block">Password<sup
+                                    class="text-danger">*</sup><a routerLink="/reset-password"
+                                    class="float-end text-danger">Forget password
+                                    ?</a></label>
+                            <div class="input-group">
+                                <input [type]="show ? 'text' : 'password'" class="form-control form-control-lg"
+                                    placeholder="Password" formControlName="password" id="password"
+                                    [ngClass]="{ 'is-invalid': submitted && error['password'].errors }" />
+
+                                <button class="btn btn-light custom-button" type="button" (click)="checkpassword()"
+                                    id="button-addon2">
+                                    <i [class]="show ? 'fas fa-eye-slash' : 'fas fa-eye'"></i>
+                                </button>
+
+                                <div class="invalid-feedback">
+                                    @if (submitted && error['password'].errors) {
+                                    @if (error['password'].errors['required']) {
+                                    <small>Password is required</small>
+                                    } @if (error['password'].errors['minlength']) {
+                                    <small>Password must be at least 6 characters</small>
+                                    } @if (error['password'].errors['maxlength']) {
+                                    <small>Password must not exceed 8 characters</small>
+                                    }
+                                    }
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                                    <label class="form-check-label text-muted fw-normal" for="defaultCheck1">
+                                        Remember password ?
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-12 d-grid mt-2">
+                            <button class="btn btn-lg btn-register">Sign In</button>
+                        </div>
+                        <!-- 
+                        <div class="col-xl-12 d-grid mt-2">
+                            <button class="btn btn-lg btn-register" routerLink="/home">Home </button>
+                        </div> -->
+                    </form>
+
+                    <div class="text-center">
+                        <p class="fs-12 text-muted mt-4">
+                            Dont have an account?
+                            <a routerLink="/signup" role="button" class="custom-links" routerLinkActive="active">Sign
+                                Up</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xxl-5 col-xl-5 col-lg-5 d-xl-block d-none px-0">
+        <!-- <div class="authentication-cover">
+          <div class="aunthentication-cover-content rounded">
+            <p class="fw-normal fs-14 op-7"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa
+              eligendi expedita aliquam quaerat nulla voluptas facilis. Porro rem voluptates possimus, ad, autem
+              quae culpa architecto, quam labore blanditiis at ratione.</p>
+          </div>
+        </div> -->
+
+        <div class="px-5">
+            <img src="../../../../assets/images/authentication/ATV-Authentication.png" alt="">
+            <div class=" p-3 rounded" style="box-shadow: rgba(100, 100, 111, 0.6) 0px 7px 29px 0px;">
+                <p class="mb-2 op-7"> <span class="fw-bold text-default top-8">Welcome back to ATV Quad Bike Subhan
+                        Enterprises</span>,
+                <p class="op-7">Please sign in to continue your off-road journey. Access your personalized account,
+                    manage your orders, and stay ahead with the latest updates and exclusive offers.</p>
+                <p class="mb-0 op-7">Signing in ensures a smooth experience and lets you track all your activities
+                    effortlessly. Let's get you back on the road!</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+
+.authentication .authentication-cover .aunthentication-cover-content {
+  width: 70%;
+  height: 30%;
+  background: #001920;
+  color: white;
+  padding: 10px !important;
+  align-items: center;
+}
+
+.authentication-cover {
+  height: 100%;
+  width: 100%;
+}
+
+.form-control {
+  background: linear-gradient(to right, #001f2e, #000000);
+}
