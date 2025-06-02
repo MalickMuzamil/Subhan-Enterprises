@@ -35,33 +35,33 @@ Subhan-Enterprises/
 ## 🌐 Frontend Angular 17 + SCSS
 Modern frontend built using Angular 17 with powerful CLI features, responsive UI, and modular architecture.
 
-### ✨ Features
+## ✨ Features
 - 🧭 Angular Routing for smooth navigation
 - 📦 Lazy loading for optimized performance
 - 🎨 SCSS for custom, scalable styling
 - 📁 Modular component structure
 - 🔄 HTTP Interceptors for token management
 
-### ▶️ Getting Started (Frontend)
+## ▶️ Getting Started (Frontend)
 - npm install
 - ng serve --open      # Starts Angular dev server
 
-### 🛠️ Backend Node.js + Express + MongoDB
+## 🛠️ Backend Node.js + Express + MongoDB
 Robust backend API using Express, Mongoose, and JWT-based authentication.
 
-### ✨ Features
+## ✨ Features
 🔐 JWT Authentication (Login, Register, Protected Routes)
 🌱 MongoDB integration via Mongoose
 🌐 RESTful API design
 🔄 JSON parsing and middleware support
 ⚠️ Global error handling
 
-### ▶️ Getting Started (Backend)
+## ▶️ Getting Started (Backend)
 cd backend
 npm install
 node server.js
 
-### 🔑 Configure your .env file:
+## 🔑 Configure your .env file:
   env
   Copy
   Edit
@@ -69,10 +69,10 @@ node server.js
   MONGO_URI=your-mongodb-connection-string
   JWT_SECRET=your-secret-key
 
-### 🎨 Styling
+## 🎨 Styling
 The Angular frontend uses SCSS for custom styling. You can switch to Tailwind or Bootstrap if desired the codebase is modular and easy to adapt.
 
- ### 📬 Contact
+ ## 📬 Contact
 Have questions or suggestions?
 📧 Email: malikmuzamil92110@gmail.com
 💼 https://www.linkedin.com/in/malik-muzamil/
