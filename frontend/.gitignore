@@ -1,0 +1,20 @@
+# Angular build output
+dist/
+.out/
+build/
+
+# Node modules
+node_modules/
+
+# Environment files
+.env
+.env.*.local
+
+# IDE and OS-specific files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Angular specific
+.angular/
+.angular-cache/
