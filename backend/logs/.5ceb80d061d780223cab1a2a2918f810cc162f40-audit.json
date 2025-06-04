@@ -1,0 +1,25 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\T7-1\\Desktop\\New folder\\Subhan-Enterprises\\backend\\logs\\.5ceb80d061d780223cab1a2a2918f810cc162f40-audit.json",
+    "files": [
+        {
+            "date": 1748855080372,
+            "name": "C:\\Users\\T7-1\\Desktop\\New folder\\Subhan-Enterprises\\backend\\logs\\Error-2025-06-02.txt",
+            "hash": "52d25f6f6bf88eda53d40f46b5622b1e4d505e8d3c91551cf8af1ed1f5fe43c0"
+        },
+        {
+            "date": 1748938003324,
+            "name": "C:\\Users\\T7-1\\Desktop\\New folder\\Subhan-Enterprises\\backend\\logs\\Error-2025-06-03.txt",
+            "hash": "632c299cb2676c66daba18e1d5d423960c73b8361f91f492bd0ca34bc590bd3c"
+        },
+        {
+            "date": 1749023086426,
+            "name": "C:\\Users\\T7-1\\Desktop\\New folder\\Subhan-Enterprises\\backend\\logs\\Error-2025-06-04.txt",
+            "hash": "9c56457fcf63a3a48409098e4d30b6197a85954f192764de578539792f608e37"
+        }
+    ],
+    "hashType": "sha256"
+}

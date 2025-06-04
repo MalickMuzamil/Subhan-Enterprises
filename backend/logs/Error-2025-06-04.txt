@@ -1,0 +1,11 @@
+{"level":"error","message":"400 - Error: Error: User not found or has been deleted","timestamp":"2025-06-04 13:16:41"}
+{"level":"error","message":"400 - Error: Error: User not found or has been deleted","timestamp":"2025-06-04 13:16:42"}
+{"level":"error","message":"400 - Error: Error: User not found or has been deleted","timestamp":"2025-06-04 13:16:47"}
+{"level":"error","message":"400 - Error: Error: User not found or has been deleted","timestamp":"2025-06-04 13:16:48"}
+{"level":"error","message":"400 - Error: Error: User not found or has been deleted","timestamp":"2025-06-04 13:16:54"}
+{"level":"error","message":"400 - Error: Error: User not found or has been deleted","timestamp":"2025-06-04 13:50:02"}
+{"level":"error","message":"400 - Error: Error: Invalid password","timestamp":"2025-06-04 14:00:55"}
+{"level":"error","message":"400 - Error: Error: Invalid password","timestamp":"2025-06-04 14:01:03"}
+{"level":"error","message":"400 - Error: Error: Invalid password","timestamp":"2025-06-04 14:01:11"}
+{"level":"error","message":"400 - Error: Error: User not found or has been deleted","timestamp":"2025-06-04 15:29:07"}
+{"level":"error","message":"400 - Error: Error: User not found or has been deleted","timestamp":"2025-06-04 15:29:17"}
