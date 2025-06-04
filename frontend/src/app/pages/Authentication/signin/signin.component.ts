@@ -49,18 +49,26 @@ export class SigninComponent {
           if (res.auth_token) {
             localStorage.setItem('authToken', res.auth_token);
             localStorage.setItem('role', res.data?.role)
+            localStorage.setItem('FirstName', res.data?.firstname)
           }
           Swal.fire({
             icon: 'success',
-            title: 'Login Successful!',
-            text: res.data?.message,
-            confirmButtonText: 'OK',
+            title: res.message,
+            timer: 3000,
+            showConfirmButton: false,
             customClass: {
-              popup: 'custom-red-background',
+              popup: 'custom-orange-background'
             },
+            timerProgressBar: true
           }).then(() => {
-            this.router.navigate(['/home'])
-          })
+            // this.router.navigate(['/home']);
+            const role = res.data?.role;
+            if (role === 'admin') {
+              this.router.navigate(['/admin']);
+            } else {
+              this.router.navigate(['/home']);
+            }
+          });
         }
       },
       error: (err) => {

@@ -66,14 +66,10 @@
                 <ul class="main-menu" style="margin-left: 0px; margin-right: 0px">
                     <li class="slide">
                         <a class="side-menu__item" role="button" routerLink="/home">
-                            <span class="side-menu__label">Home</span>
+                            <span class="side-menu__label">DashBoard</span>
                         </a>
                     </li>
-                    <li class="slide">
-                        <a routerLink="/about-us" class="side-menu__item text-center">
-                            <span class="side-menu__label">About</span>
-                        </a>
-                    </li>
+                    
 
                     <li class="nav-item dropdown slide has-sub side-menu__item">
                         <a class="nav-link dropdown-toggle side-menu__label me-2" href="#" id="navbarDropdown"
@@ -86,23 +82,7 @@
                             <li><a class="dropdown-item">Quad Bike</a></li>
                         </ul>
                     </li>
-                    <li class="slide">
-                        <a href="#pricing" class="side-menu__item">
-                            <span class="side-menu__label">Pricing</span>
-                        </a>
-                    </li>
-
-                    <li class="slide">
-                        <a routerLink="/faq" class="side-menu__item">
-                            <span class="side-menu__label">Faq's</span>
-                        </a>
-                    </li>
-
-                    <li class="slide">
-                        <a routerLink="/contact-us" class="side-menu__item">
-                            <span class="side-menu__label">Contact</span>
-                        </a>
-                    </li>
+                    
                 </ul>
 
                 <ng-container *ngIf="isLoggedIn; else showbuttons">
@@ -120,6 +100,8 @@
                         </div>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="mainHeaderProfile">
+                        <li><a class="dropdown-item" href="/profile">Profile</a></li>
+                        <li><a class="dropdown-item" href="/settings">Settings</a></li>
                         <li>
                             <hr class="dropdown-divider" />
                         </li>
@@ -134,8 +116,8 @@
                 <ng-template #showbuttons>
                     <div class="d-lg-flex d-none">
                         <div class="btn-list d-lg-flex d-none mt-lg-2 mt-xl-0 mt-0 align-items-center">
-                            <a routerLink="/signup" class="btn btn-wave btn-register"> Sign Up </a>
-                            <a routerLink="/login" class="btn btn-wave secondory-btn"> Login </a>
+                            <a routerLink="/" class="btn btn-wave btn-register"> Sign Up </a>
+                            <a routerLink="/" class="btn btn-wave secondory-btn"> Login </a>
                         </div>
                     </div>
                 </ng-template>

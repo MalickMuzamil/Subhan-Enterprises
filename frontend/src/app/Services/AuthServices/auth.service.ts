@@ -21,51 +21,39 @@ export class AuthService {
   validateToken(): Promise<boolean> {
     return new Promise((resolve) => {
       const token = localStorage.getItem('authToken');
-      console.log('token local storage se arha ha NGONINIT ke bd', token)
 
-      if (token) {
-        lastValueFrom(
-          this.http.get(`${environment.apiUrl}validate`, {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          })
-        )
-          .then((res: any) => {
-            console.log('Response from backend:', res);
-            console.log('Response status:', res.status);
-            console.log('Response message:', res.message);
-            console.log('Auth Token:', res.auth_token);
-            if (res.status === 200 && res.message === "Validated") {
-              console.log('Token validated:');
-              resolve(true);
-            }
+      if (!token) {
+        console.warn('No token found.');
+        localStorage.clear();
+        this.router.navigate(['/home']);
+        return resolve(false);
+      }
 
-            else {
-              console.log('Condition did not match:', {
-                status: res.status,
-                message: res.message,
-              });
-
-              localStorage.clear();
-              console.log('Token is invalid, cleared storage.');
-              this.router.navigate(['/login']);
-              resolve(false);
-            }
-          })
-          .catch((err: any) => {
+      lastValueFrom(
+        this.http.get(`${environment.apiUrl}validate`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
+      )
+        .then((res: any) => {
+          if (res?.status === 200 && res?.message === "Validated") {
+            this._isAuth.next(true);
+            resolve(true);
+          }
+          else {
+            console.warn('Token invalid. Response:', res);
             localStorage.clear();
-            console.error('Token validation failed:', err);
             this.router.navigate(['/login']);
             resolve(false);
-          });
-      }
-      else {
-        localStorage.clear();
-        console.log('No token found, cleared storage.');
-        this.router.navigate(['/login']);
-        resolve(false);
-      }
+          }
+        })
+        .catch((err) => {
+          console.error('Validation error:', err);
+          localStorage.clear();
+          this.router.navigate(['/login']);
+          resolve(false);
+        });
     });
   }
 
@@ -95,6 +83,6 @@ export class AuthService {
   public logout() {
     localStorage.clear()
     this._isAuth.next(false);
-    this.router.navigate(['/login'])
+    this.router.navigate(['/home'])
   }
 }

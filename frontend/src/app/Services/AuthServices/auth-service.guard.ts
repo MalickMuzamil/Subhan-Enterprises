@@ -1,23 +1,26 @@
-import { CanActivateFn } from '@angular/router';
+import { CanActivateFn, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from './auth.service';
 
-export const authServiceGuard: CanActivateFn = (route, state) => {
-  if (typeof window !== 'undefined' && window.localStorage) {
-    const auth_token = localStorage.getItem('authToken');
-    const role = localStorage.getItem('role');
+export const authServiceGuard: CanActivateFn = async (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => {
+  const router = inject(Router);
+  const authService = inject(AuthService);
+  const role = localStorage.getItem('role');
 
-    const router = inject(Router);
-    const authService = inject(AuthService);
+  const isValid = await authService.validateToken(); // Server-side validation
 
-    if (!auth_token || !role) {
-      router.navigate(['/auth']);
-      return false;
-    }
-
-    return true;
+  if (!isValid) {
+    router.navigate(['/login']);
+    return false;
   }
 
-  return false;
+  const expectedRole = route.data['role'];
+  if (expectedRole && role !== expectedRole) {
+    console.warn(`Unauthorized: role mismatch. Required=${expectedRole}, found=${role}`);
+    router.navigate(['/']);
+    return false;
+  }
+
+  return true;
 };

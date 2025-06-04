@@ -15,35 +15,15 @@ import { DashBoardComponent } from './pages/Admin/dash-board/dash-board.componen
 import { OrderPageComponent } from './pages/order-page/order-page.component';
 
 export const routes: Routes = [
-    {
-        path: '',
-        component: SiteLayoutComponent,
-        canActivate: [authServiceGuard],
-        data: { role: 'user' },
-        children: [
-            {
-                path: 'home',
-                component: HomeComponent
-            },
+    // {
+    //     path: '',
+    //     component: SiteLayoutComponent,
+    //     canActivate: [authServiceGuard],
+    //     data: { role: 'user' },
+    //     children: [
 
-            {
-                path: 'contact-us',
-                component: ContactUsComponent,
-            },
-            {
-                path: 'faq',
-                component: FaqComponent,
-            },
-            {
-                path: 'about-us',
-                component: AboutComponent,
-            },
-            {
-                path: 'details',
-                component: OrderPageComponent
-            }
-        ],
-    },
+    //     ],
+    // },
 
 
     {
@@ -66,7 +46,7 @@ export const routes: Routes = [
         children: [
             {
                 path: '',
-                redirectTo: 'login',
+                redirectTo: '',
                 pathMatch: 'full',
             },
             {
@@ -89,13 +69,34 @@ export const routes: Routes = [
                 path: 'update-password',
                 component: UpdatePasswordComponent
             },
+            {
+                path: 'home',
+                component: HomeComponent
+            },
+
+            {
+                path: 'contact-us',
+                component: ContactUsComponent,
+            },
+            {
+                path: 'faq',
+                component: FaqComponent,
+            },
+            {
+                path: 'about-us',
+                component: AboutComponent,
+            },
+            {
+                path: 'details',
+                component: OrderPageComponent
+            }
 
         ],
     },
 
     {
         path: '**',
-        redirectTo: '/login',
+        redirectTo: '/home',
     },
 
 ];
