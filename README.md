@@ -12,22 +12,39 @@
 
 ## 📁 Project Structure
 Subhan-Enterprises/
+
 ├── backend/ # Node.js + Express.js API with JWT Auth
+
 │ ├── controllers/ # Request handlers and logic
+
 │ ├── routes/ # API endpoints
+
 │ ├── models/ # Mongoose schemas
+
 │ ├── middlewares/ # JWT & error handling middleware
+
 │ ├── config/ # MongoDB & environment configs
+
 │ ├── .env # Environment variables
+
 │ └── server.js # Entry point of the backend server
+
 │
+
 ├── frontend/ # Angular 17 Application
+
 │ ├── src/
+
 │ │ ├── app/ # Components, services, routes
+
 │ │ └── assets/ # Static assets (images, icons, etc.)
+
 │ ├── angular.json # Angular config
+
 │ └── index.html
+
 │
+
 └── README.md # Project Documentation
 
 ---
@@ -42,12 +59,18 @@ Modern frontend built using Angular 17 with powerful CLI features, responsive UI
 - 📁 Modular component structure
 - 🔄 HTTP Interceptors for token management
 
+---
+
 ## ▶️ Getting Started (Frontend)
 - npm install
 - ng serve --open      # Starts Angular dev server
 
+---
+
 ## 🛠️ Backend Node.js + Express + MongoDB
 Robust backend API using Express, Mongoose, and JWT-based authentication.
+
+---
 
 ## ✨ Features
 🔐 JWT Authentication (Login, Register, Protected Routes)
@@ -63,18 +86,20 @@ node server.js
 
 ## 🔑 Configure your .env file:
   env
-  Copy
-  Edit
   PORT=5000
   MONGO_URI=your-mongodb-connection-string
   JWT_SECRET=your-secret-key
 
+---
+
 ## 🎨 Styling
 The Angular frontend uses SCSS for custom styling. You can switch to Tailwind or Bootstrap if desired the codebase is modular and easy to adapt.
 
+---
+
  ## 📬 Contact
 Have questions or suggestions?
-<!-- 📧 Email: malikmuzamil92110@example.com | 💼 LinkedIn: linkedin.com/in/malik-muzamil -->
+📧 Email: malikmuzamil92110@example.com | 💼 LinkedIn: linkedin.com/in/malik-muzamil 
 
 
 **“Success is not just about building something it's about solving real problems with purpose.”**
